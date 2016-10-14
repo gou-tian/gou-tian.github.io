@@ -1,0 +1,138 @@
+@charset "UTF-8";
+.box-shadow {
+	-webkit-box-shadow: 2px 2px 6px #8e8e8e;
+	box-shadow: 2px 2px 6px #8e8e8e;
+}
+input[type="file"] {
+	display: none;
+}
+.popup {
+	position: absolute;
+	top: 100px;
+	left: 500px;
+	width: 300px;
+	min-height: 150px;
+	border: 1px solid #bababa;
+}
+.popup-but {
+	display: table;
+	float: left;
+	width: 50%;
+	height: 20px;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+}
+.popup-but:hover {
+	color: #fff;
+	text-decoration: none;
+	background-color: #4281f4;
+}
+/* head */
+.popup-head {
+	position: relative;
+	height: 30px;
+	line-height: 30px;
+	border-bottom: 1px solid #bababa;
+}
+.popup-title {
+	position: absolute;
+	left: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	max-width: 90%;
+}
+.popup-close {
+	position: absolute;
+	right: 0;
+	width: 30px;
+	height: 100%;
+	font-size: 16px;
+	text-align: center;
+	cursor: pointer;
+}
+.popup-close:hover,.popup-foot .close:hover {
+	color: #fff;
+	background-color: #c6412d;
+	-webkit-box-shadow: 2px 2px 6px #8e8e8e;
+	box-shadow: 2px 2px 6px #8e8e8e;
+}
+/* body */
+.popup-body {
+	position: absolute;
+	top: 30px;
+	left: 0;
+	right: 0;
+	bottom: 30px;
+	width: auto;
+}
+.popup-tips {
+	height: 20px;
+	border-bottom: 1px solid #bababa;
+}
+.popup-tips .popup-but:hover {
+	color: #000;
+	background-color: transparent;
+}
+.popup-tips .up-image {
+	position: relative;
+}
+.popup-tips .up-image:hover {
+	color: #fff;
+	background-color: #4281f4;
+}
+.popup-image,.up-image {
+	width: 25%;
+}
+.popup-text,.add-text {
+	width: 75%;
+}
+.popup-edit {
+	position: absolute;
+	top: 20px;
+	bottom: 0;
+	width: 100%;
+}
+.popup-image,.popup-text {
+	float: left;
+	height: 100%;
+	/* background-color: #ccc; */
+}
+.popup-image {
+	position: relative;
+}
+.popup-image:after {
+	content: '';
+	display: table;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	border-right: 1px solid #bababa;
+}
+.popup-image img {
+	width: 90%;
+}
+.popup-text {}
+/* foot */
+.popup-foot {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	height: 30px;
+	line-height: 30px;
+	border-top: 1px solid #bababa;
+}
+.popup-foot .confirm {
+	position: relative;
+	height: 100%;
+}
+.popup-foot .confirm:after {
+	content: '';
+	display: table;
+	position: absolute;
+	top: 0;
+	right: 0;
+	height: 100%;
+	border-right: 1px solid #bababa;
+}

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+:before, :after, * {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+html, body {
+	height: 100%;
+}
+html {
+	font: 12px/1.5 tahoma, '\5FAE\8F6F\96C5\9ED1', sans-serif;
+}
+body {
+	background-color: #fff;
+}
+body, ul, ol, p, h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+	padding: 0;
+}
+input, text, textarea {
+	outline: none;
+}
+img {
+	border: none 0;
+}
+a {
+	text-decoration: none;
+	color: #000;
+}
+a:hover {
+	text-decoration: underline;
+}
+a:active {
+	color: #ccc;
+}
