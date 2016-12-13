@@ -1,0 +1,156 @@
+<!-- 幻灯片 -->
+<view class="slide-warp">
+	<view class="silde-body">
+		<swiper indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+			<block wx:for="{{imgUrls}}" wx:key="index">
+				<swiper-item>
+					<image src="{{item}}" class="slide-image" mode="scaleToFill"/>
+				</swiper-item>
+			</block>
+		</swiper>
+	</view>
+</view>
+<!-- navigator -->
+<view class="nav-warp">
+	<view class="tab">
+		<block wx:for="{{navItem}}" wx:key="index">
+			<text bindtap="navToggle" data-id="{{index}}" class="tab-txt {{showItem == index ? 'active' : '' }}">{{item}}</text>
+		</block>
+	</view>
+</view>
+<view class="show-warp">
+	<block wx:for="{{discuss}}" wx:key="index">
+		<template is="discuss" data="{{item}}"></template>
+		<template is="discuss-reply" data="{{item}}"></template>
+		<template is="discuss-more" data="{{item}}"></template>
+	</block>
+</view>
+
+<view class="reply-popup clearfix" wx:if="{{reply}}" style="top:{{top}}px"> <!--  -->
+	<view class="reply-icon pull-left">☻</view>
+	<textarea class="reply-txt pull-left" data-reply="val" bindblur="getTextareaVal" placeholder="添加评论" auto-height focus="{{focus}}"/>
+	<button class="reply-but pull-left" plain="true" bindtap="replyIssue">评论</button>
+</view>
+
+<!-- 评论 -->
+<template name="discuss">
+	<view class="show-divide">
+		<view class="show-head">
+			<view class="show-image">
+				<image src="{{item.cp_touxiang}}" mode="aspectFill"></image>
+			</view>
+			<view class="show-user-info">
+				<view class="show-icon-sex">
+					<text wx:if="{{item.cp_sex < 1}}">♀</text>
+					<text wx:else="{{item.cp_sex > 0}}">♂</text>
+				</view>
+				<view class="show-name">
+					<text>{{item.cp_nicname}}</text>
+				</view>
+				<view class="show-lv">
+					<text wx:if="item.cp_level < 10">LV.0{{item.cp_level}}</text>
+					<text wx:else="item.cp_level > 10">LV.{{item.cp_level}}</text>
+				</view>
+			</view>
+			<view class="pet-info">
+				<view class="pet-image">
+					<image src="{{item.cp_chongphoto}}"></image>
+				</view>
+				<view class="pet-name">
+					<text>{{item.cp_chongname}}</text>
+				</view>
+				<view class="pet-age">
+					<text>{{item.petAge || item.petAge}}</text>
+				</view>
+				<view class="pet-site">
+					<text>{{item.cp_province}}</text>
+					<text>{{item.cp_city}}</text>
+				</view>
+			</view>
+			<view class="pet-follow" bindtap="follow" data-qtuid="{{item.cp_showid}}" data-uid="{{item.cp_uid}}">
+				<text>{{item.cp_guanstate === 0 ? '未关注' : '已关注'}}</text>
+			</view>
+		</view>
+		<view class="show-body">
+			<view class="show-photo" data-uid="{{item.cp_uid}}" data-showid="{{item.cp_showid}}" bindtap="navigateTo">
+				<image src="{{item.cp_showzhan}}"></image>
+			</view>
+			<view class="show-discuss clearfix">
+				<view class="show-discuss-title">{{item.cp_text}}</view>
+				<view class="show-discuss-image clearfix">
+					<block wx:for="{{item.cp_liketou || item.zan}}" wx:key="index">
+					    <image src="{{item.cp_touxiang}}"></image>
+					</block>
+				</view>
+
+				<view class="show-discuss-info clearfix">
+					<view class="show-discuss-info-icon clearfix">
+						<!-- 此块内容image标签的src地址使用服务器地址，防止模板嵌套 -->
+						<view class="show-discuss-info-txt" bindtap="elegant">
+							<image class="pull-left" src="../images/icon-2.png"></image>
+							<text class="pull-left">赞</text>
+						</view>
+						<view class="show-discuss-info-txt" bindtap="addReplyUser">
+							<image class="pull-left" src="../images/icon-2.png"></image>
+							<text class="pull-left">评论（{{item.cp_plcont || item.plcont}}）</text>
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+	</view>
+</template>
+<!-- 回复模板-迷你 -->
+<template name="discuss-reply">
+	<view class="show-discuss clearfix">
+		<view class="show-discuss-list-warp" wx:if="{{item.pl.length > 0}}">
+			<block wx:for="{{item.pl}}" wx:key="index">
+			    <view class="show-discuss-list {{index > 0 ? 'show-discuss-division' : ''}}" data-id="{{index}}" data-typeDiscuss="reply" bindtap="addReplyUser">
+					<text class="text-color-blue">{{item.plusernic}}:</text>
+					<text class="padd-txt text-color-grey">{{item.comment}}</text>
+				</view>
+				<view wx:if="{{item.reply}}" class="show-discuss-list show-discuss-division" data-id="{{index}}" data-typeDiscuss="reply" bindtap="addReplyUser">
+					<text class="text-color-blue">{{item.reply.user}}<text class="padd-txt text-color-grey">回复</text>{{item.user}}:</text>
+					<text class="padd-txt text-color-grey">{{item.reply.title}}</text>
+				</view>
+			</block>
+		</view>
+	</view>
+</template>
+<!-- 回复模板-全部展示 -->
+<template name="discuss-reply-full">	
+	<view class="show-reply-full-warp">
+		<view class="reply-warp">
+			<text class="reply-hr"></text>
+			<text class="reply-total">全部{{item.plcont}}条评论</text>
+		</view>
+		<block wx:for="{{item.pl}}" wx:key="index">
+			<view class="show-reply-full">
+				<!-- 用户头像 -->
+				<view class="reply-img-warp reply-full-position">
+					<image mode="aspectFill" src="{{item.plusertx}}"></image>
+				</view>
+				<!-- 用户昵称 -->
+				<view class="reply-userName reply-full-position">
+					<text class="text-color-blue">{{item.plusernic}}</text>
+				</view>
+				<!-- 回复时间 -->
+				<view class="reply-time reply-full-position">
+					<text class="text-color-grey">{{item.replyTime}}</text>
+				</view>
+				<!-- 回复内容 -->
+				<view class="reply-body reply-full-position">
+					<text class="text-color-grey">{{item.cp_comment}}</text>
+				</view>
+			</view>
+		</block>
+	</view>	
+</template>
+<!-- 更多模板 -->
+<template name="discuss-more">
+	<view class="show-discuss-list-moer">
+		<navigator url="details/details?uid={{item.cp_uid}}&showid={{item.cp_showid}}">
+			<text class="text-color-blue">查看所有{{item.cp_plcont}}条评论</text>
+		</navigator>
+	</view>
+</template>

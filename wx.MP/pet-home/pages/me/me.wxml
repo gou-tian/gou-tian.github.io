@@ -1,0 +1,3 @@
+<view>
+	<button bindtap="uploadImage">上传</button>
+</view>

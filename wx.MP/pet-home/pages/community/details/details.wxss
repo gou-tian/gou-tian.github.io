@@ -1,0 +1,4 @@
+@import "../community.wxss";
+scroll-view {
+	height: 100%;
+}

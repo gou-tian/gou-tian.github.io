@@ -1,0 +1,24 @@
+.clearfix::before, .clearfix::after {
+	content: '';
+	display: table!important;
+}
+.clearfix::after {
+	clear: both;
+}
+.pull-left {
+	float: left;
+}
+page {
+	font-size: 24rpx;
+}
+@media screen and (min-width:320px) and (max-width:359px) {
+	page {
+		font-size: 30rpx;
+	}
+}
+.text-color-blue {
+	color: #285167;
+}
+.text-color-grey {
+	color: #b0b0b0;
+}

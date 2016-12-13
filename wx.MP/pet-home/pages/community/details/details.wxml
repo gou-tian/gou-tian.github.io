@@ -1,0 +1,12 @@
+<import src="../community.wxml"/>
+<view class="show-warp">
+	<block wx:for="{{discuss}}" wx:key="index">
+		<template is="discuss" data="{{item}}"></template>
+		<template is="discuss-reply-full" data="{{item}}"></template>
+	</block>
+</view>
+<view class="reply-popup clearfix" wx:if="{{reply}}" style="top:{{top}}px">
+	<view class="reply-icon pull-left">☻</view>
+	<textarea class="reply-txt pull-left" data-reply="val" bindblur="getTextareaVal" placeholder="添加评论" auto-height focus="{{focus}}"/>
+	<button class="reply-but pull-left" plain="true" bindtap="replyIssue">评论</button>
+</view>

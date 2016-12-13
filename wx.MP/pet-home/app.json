@@ -1,0 +1,47 @@
+{
+	"pages": [
+		"pages/community/community",
+		"pages/community/details/details",
+		"pages/school/school",
+		"pages/photo/photo",
+		"pages/me/me",
+		"pages/logs/logs"
+	],
+	"window": {
+		"backgroundTextStyle": "light",
+		"navigationBarBackgroundColor": "#fff",
+		"navigationBarTitleText": "宠派",
+		"navigationBarTextStyle": "black",
+		"backgroundTextStyle": "light",
+		"backgroundColor": " #000",
+		"enablePullDownRefresh":true,
+		"debug": true
+	},
+	"tabBar": {
+		"backgroundColor": "#e25450",
+		"color": "#f1aaa8",
+		"selectedColor": "#fff",
+		"borderStyle": "white",
+		"list": [{
+			"pagePath": "pages/community/community",
+			"iconPath": "pages/images/community.png",
+			"selectedIconPath": "pages/images/community.png",
+			"text": "社区"
+		}, {
+			"pagePath": "pages/school/school",
+			"iconPath": "pages/images/school.png",
+			"selectedIconPath": "pages/images/school.png",
+			"text": "学堂"
+		}, {
+			"pagePath": "pages/photo/photo",
+			"iconPath": "pages/images/photo.png",
+			"selectedIconPath": "pages/images/photo.png",
+			"text": "拍照"
+		}, {
+			"pagePath": "pages/me/me",
+			"iconPath": "pages/images/me.png",
+			"selectedIconPath": "pages/images/me.png",
+			"text": "我"
+		}]
+	}
+}
