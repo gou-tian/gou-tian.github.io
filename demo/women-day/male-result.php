@@ -6,7 +6,6 @@
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="yes" name="apple-touch-fullscreen">
 	<meta content="telephone=no,email=no" name="format-detection">
-	<script src="src/set-dpr.js"></script>
 	<title>看谁更懂她？</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/women-day.css">
@@ -14,9 +13,6 @@
 <?php 
 
 header("Content-type:text/html;charset=utf-8");
-
-
-
 
 $arr[1]['name'] = '千年屌丝';
 $arr[1]['zj'] = ' 啥也不说了，请收下我的膝盖吧，能屌丝成您这样，也是没谁了';
@@ -77,14 +73,14 @@ if($_GET['res'] > 80 ){
 			<button onclick="fenxiang(this)">
 				<a href="javascript:">我要分享</a>
 			</button>
-			
-			<button onclick="fenxiang(this)">
+			<button>
 				<a href="http://mp.weixin.qq.com/s?__biz=MzA5NTI4NTAyOA==&mid=505489296&idx=1&sn=eada5056ea259af47801aef2058291b2&chksm=0b943ddb3ce3b4cd295b6db4a7d03d07ad481140e1c2b54effccdf55723f108f01649d09ae54&mpshare=1&scene=1&srcid=0210LSKu4PCxQadggInPKCQb#rd">关注我们</a>
 			</button>
 		</div>
 		<div id="fenxiang" onclick="quxiao(this)"></div>
 		<img src="images/guide.png" alt="" id="fenxiangimg" onclick="quxiao(this)">
 	</div>
+	<script src="src/set-dpr.js"></script>
 	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/1.7.1/jquery.min.js"></script>
 	<script>
 		console.log(window.location.search);
@@ -125,11 +121,9 @@ if($_GET['res'] > 80 ){
 	          ]
 	    });
 	</script>
-	<?php
-		 
-
+	<?php 
 		$news = array(
-			"Title" =>"你了解你的TA么？",
+			"Title" =>"女神节史上最露骨的测验，敢来吗？",
 			"Description"=>"我竟然得了".$_GET['res']."分，获得了".$array['name'] ."称号,你也来试试吧",
 			 "PicUrl" =>URL."/images/tutu.jpg",
 			 "Url" =>URL."/male-result.php?res=".$_GET['res']

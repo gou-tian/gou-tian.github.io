@@ -44,11 +44,11 @@
 	opacity: 0;
 }
 .page-welcome .top-text {
-	top: 3.68rem;/* 276px */
+	top: 1.81333333rem;/* 136px */
 	width: 7.6rem;/* 570px */
-	height: 1.90666667rem;/*143px*/
+	height: 4rem;/* 300px */
 	margin: 0 auto;
-	background: url('../images/index-text.png') no-repeat center / cover;
+	background: url(../images/index-text.png) no-repeat center / cover;
 }
 .top-sex-select {
 	top: 6.22666667rem;/* 467px */
@@ -187,26 +187,26 @@
 }
 .page-title {
 	width: 7.76rem;/* 582px */
-	height: 1.90666667rem;/* 143px */
+	height: 2.96rem;/* 222px */
 	margin: 0 auto;
 }
 
 /* page-male-content */
 .page-head {
-	top: .86666667rem;/* 65px */
+	top: .56rem;/* 42px */
 	width: 100%;
 }
 .page-male .page-title {
-	background: url(../images/male-text-1.png) no-repeat center / cover;
+	background: url(../images/male-ask.png) no-repeat center / cover;
 }
 .page-body {
-	top: 3rem;/* 225px */
+	top: 3.5rem;/* 225px */
 	width: 100%;
 }
 .page-content {
 	position: relative;
 	width: 6.8rem;/* 510px */
-	height: 6rem;/* 450px */
+	height: 5.5rem;/* 450px */
 	margin: 0 auto;
 	border: .04rem solid #fff;
 	border-radius: 20%;
@@ -231,7 +231,7 @@
 	left: .53333333rem;/* 40px */
 	width: 1.89333333rem;/* 142px */
 	height: 2.48rem;/* 186px */
-	background: url('../images/balloon-left.png') no-repeat center / cover;
+	background: url(../images/balloon-left.png) no-repeat center / cover;
 }
 .balloon-right {
 	position: absolute;
@@ -239,7 +239,7 @@
 	right: .46666667rem;/* 35px */
 	width: 3.18666667rem;/* 239px */
 	height: 3.16rem;/* 237px */
-	background: url('../images/balloon-right.png') no-repeat center / cover;
+	background: url(../images/balloon-right.png) no-repeat center / cover;
 }
 .page-foot {
 	left: 0;
@@ -249,10 +249,10 @@
 	height: 4.48rem;/* 336px */
 	margin: 0 auto;
 	text-align: center;
-	background: url('../images/male-select.png') no-repeat center / cover;
+	background: url(../images/male-select.png) no-repeat center / cover;
 }
 .page-foot-female {
-	background: url('../images/female-select.png') no-repeat center / cover;
+	background: url(../images/female-select.png) no-repeat center / cover;
 }
 .page-foot > a {
 	display: inline-block;
@@ -270,7 +270,7 @@
 	background-image: url('../images/male-text.png');
 }
 .page-female .page-title {
-	background: url(../images/female-text-1.png) no-repeat center / cover;
+	background: url(../images/female-ask.png) no-repeat center / cover;
 }
 .page-female .page-content {
 	background-color: #df1e2e;
@@ -365,10 +365,17 @@
 .page-female .ask-result {
 	color: #fba7ae;
 }
-.ask-warp [type="radio"] {
-	width: .26666667rem;/* 20px */
-	height: .26666667rem;/* 20px */
-	opacity: 0;
+.ask-warp > div {
+	font-weight: bold;
+}
+.ask-warp > div:nth-child(2) {
+	margin-top: .13333333rem;
+}
+.page-male .ask-warp > p {
+	color: #8bb6f4;
+}
+.page-female .ask-warp > p {
+	color: #fba7ae
 }
 .ask-result {
 	padding: .74666667rem;
@@ -380,7 +387,7 @@
 	color: #fff;
 }
 .page-result .page-head {
-	top: 1.64rem;/* 123px */
+	top: 1.12rem;/* 84px */
 }
 .page-result .page-body {
 	top: 4.06666667rem;/* 305px */
@@ -413,9 +420,6 @@
 	}
 	.public-socket-content > p {
 		font-size: 120%;
-	}
-	.page-foot > button {
-		font-size: 150%;
 	}
 }
 

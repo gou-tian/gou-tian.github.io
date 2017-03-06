@@ -6,10 +6,10 @@
 	<meta content="yes" name="apple-mobile-web-app-capable">
 	<meta content="yes" name="apple-touch-fullscreen">
 	<meta content="telephone=no,email=no" name="format-detection">
-	<script src="src/set-dpr.js"></script>
 	<title>看谁更懂TA？</title>
 	<link rel="stylesheet" href="css/reset.css">
 	<link rel="stylesheet" href="css/women-day.css">
+	
 </head>
 <body>
 	<div class="public-fixed publice-align page-warp">
@@ -24,9 +24,9 @@
 			</div>
 		</div>
 	</div>
+	<script src="src/set-dpr.js"></script>
 	<script src="src/jquery-1.11.3.min.js"></script>
 	<script type="text/javascript">
-		
 		$('[data-sex]').on('click', function(event) {
 			event.preventDefault();
 			sessionStorage.lastname = $(this).data('sex');
