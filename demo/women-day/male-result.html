@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<script src="src/set-dpr.js"></script>
+	<title>看谁更懂她？</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/women-day.css">
+</head>
+<body>
+	<!-- 男 -->
+	<div class="page-male page-result active">	<!-- 状态切换 -->
+		<img src="images/index-male-bg.jpg" alt="">
+		<div class="public-fixed page-head">
+			<div class="page-title"></div>
+		</div>
+		<div class="public-absolute page-body">
+			<div class="page-content">
+				<div class="ask-warp ask-result">
+					<p>您的总得分: <span><?php $_GET['res'] ?></span> 分</p>
+					<p>光荣获得: <span>屌丝男</span> 称号</p>
+					<p>性格总结: <span>十年磨一贱，谁 能比你贱，作为一介屌丝， 单身就是你的宿命，认命吧 少年！</span></p>
+				</div>
+			</div>
+		</div>
+		<div class="public-absolute page-foot">
+			<button>
+				<a href="index.html">我也要玩</a>
+			</button>
+		</div>
+	</div>
+	<script>
+		console.log(window.location.search);
+	</script>
+</body>
+</html>

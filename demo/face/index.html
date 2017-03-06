@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh_CN">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<script src="src/set-dpr.js"></script>
+	<meta charset="UTF-8">
+	<title>人脸识别</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/index.css">
+	<style id='afterVal'></style>
+</head>
+<body>
+	<img src="images/bg.jpg" alt="" class="global-fixed global-bg">
+	<div class="page-title">技术中心 出品</div>
+	<div class="global-fixed page-head">
+		<p class="page-title">你的颜龄是多少？</p>
+		<p class="page-title">JinShangXing</p>
+	</div>
+	<!-- 默认相框 -->
+	<div class="photo-frame">
+		<div class="photo-default">
+			<img src="images/default/default-1.jpg" alt="">
+			<img src="images/default/default-2.jpg" alt="" class="photo-active">
+			<img src="images/default/default-3.jpg" alt="">
+			<img src="images/default/default-4.jpg" alt="">
+		</div>
+		<div class="photo-center">
+			<a href="javascript:;"></a>
+		</div>
+		<div class="photo-tag">
+			<button class="global-but">
+				<span></span>
+				使用这张照片
+			</button>
+		</div>
+	</div>
+	<!-- 上传相框 -->
+	<div class="global-fixed photo-update"></div>
+	<!-- 打开图库或是相机 -->
+	<input type="file" hidden="hidden">
+	<button class="global-fixed photo-open "></button>
+	<!-- tips -->
+	<p class="global-fixed page-tips">亲，请放心使用，我们不会保存您的美照^_^</p>
+	<!-- 分享按钮 -->
+	<button class="global-fixed photo-share"></button>
+	<!-- 基础库 -->
+	<script src="//cdn.bootcss.com/jquery/1.12.4/jquery.js"></script>
+	<script src="js/face.js"></script>
+</body>
+</html>

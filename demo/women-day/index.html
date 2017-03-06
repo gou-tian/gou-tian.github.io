@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta content="yes" name="apple-mobile-web-app-capable">
+	<meta content="yes" name="apple-touch-fullscreen">
+	<meta content="telephone=no,email=no" name="format-detection">
+	<script src="src/set-dpr.js"></script>
+	<title>看谁更懂TA？</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/women-day.css">
+</head>
+<body>
+	<div class="public-fixed publice-align page-warp">
+		<!-- 欢迎页 -->
+		<div class="page-welcome active">	<!-- 状态切换 -->
+			<img src="images/index-bg.jpg" alt="">
+			<div class="public-absolute publice-align top-text"></div>
+			<div class="public-absolute top-sex-select">
+				<p>请选择你的性别</p>
+				<a href="female.html" data-sex='female'></a>
+				<a href="male.html" data-sex='male'></a>
+			</div>
+		</div>
+	</div>
+	<script src="src/jquery-1.11.3.min.js"></script>
+	<script type="text/javascript">
+		
+		$('[data-sex]').on('click', function(event) {
+			event.preventDefault();
+			sessionStorage.lastname = $(this).data('sex');
+			console.log(sessionStorage.lastname);
+			window.location.href = $(this).attr('href');
+		});
+	</script>
+</body>
+</html>

@@ -1,0 +1,459 @@
+@charset "UTF-8";
+
+/* 页面 */
+.page-warp, .page-result {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+}
+.page-warp > img {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -10;
+}
+.page-body {
+	position: relative;
+	height: 88%;
+}
+.page-footer {
+	position: absolute;
+	bottom: 12%;
+	width: 10rem;
+	height: 12%;
+	padding-top: 2%;
+	padding-bottom: 2%;
+}
+.page-footer .lantern {
+	position: relative;
+	width: 17.6%;
+	height: 100%;
+	float: left;
+	margin-left: 2%;	
+	background: url('../images/lantern-init.png') no-repeat center / 100%;
+}
+.page-count {
+	position: absolute;
+	right: .2rem;
+	bottom: 1rem;
+	color: #fff;
+}
+.page-result {
+	display: none;
+	background-color: lightyellow;
+}
+.disable {
+	display: none;
+}
+
+/* 内容 */
+.page {
+	position: absolute;
+	top: 5%;
+	left: 0;
+	right: 0;
+	width: 80%;
+	height: 90%;
+	margin: 0 auto;
+}
+.page-tree-left {
+	position: absolute;
+	top: 6.62666667rem;/* 497px */
+	left: 0;
+	width: 4.17333333rem;/* 313px */
+	height: 2.70666667rem;/* 203px */
+	background: url(../images/left-tree.png) no-repeat center / contain;
+}
+.page-tree-right {
+	position: absolute;
+	top: 9.70666667rem;/* 728px */
+	right: 0;
+	width: 4.34666667rem;/* 326px */
+	height: 2.78666667rem;/* 209px */
+	background: url(../images/right-tree.png) no-repeat center / contain;
+}
+.page-text {
+	position: absolute;
+	top: 2.4rem;/* 180px */
+	left: 1.94666667rem;/* 146px */
+	width: 6.42666667rem;/* 482px */
+	height: 4.28rem;/* 321px */
+	background: url(../images/lantern-text.png) no-repeat center / contain;
+}
+.page-aura {
+	position: absolute;
+	top: 2.7em;
+	left: 0.24rem;
+	width: 3rem;
+	height: 3rem;
+}
+.page-left-cloud {
+	position: absolute;
+	top: 2.4rem;/* 180px */
+	left: 2.53333333rem;/* 190px */
+	width: 1.13333333rem;/* 85px */
+	height: .69333333rem;/* 52px */
+	background: url(../images/left-cloud.png) no-repeat center / contain;
+}
+.page-right-cloud {
+	position: absolute;
+	top: 3.73333333rem;/* 280px */
+	right: 1.4rem/* 105px */ ;
+	width: .78666667rem/* 59px */ ;
+	height: .57333333rem/* 43px */ ;
+	background: url(../images/right-cloud.png) no-repeat center / contain;
+}
+.page-bottom-cloud {
+	position: absolute;
+	top: 5.33333333rem;/* 400px */
+	left: 2.89333333rem/* 217px */ ;
+	width: .85333333rem;
+	height: .57333333rem/* 43px */ ;
+	background: url(../images/bottom-cloud.png) no-repeat center / contain;
+}
+.page-card, .page-blessing-warp {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 0;
+	right: 0;
+	width: 6rem;
+	height: 6rem;
+	line-height: 6rem;
+	margin: 0 auto;
+}
+.page-card {
+	left: 2px;
+	text-align: center;
+	color: #d4311d;
+	font-weight: bold;
+	font-size: 150%;
+	background: url(../images/lantern.png) no-repeat center / 100%;
+}
+.page-card > p {
+	font-size: 1em;
+	line-height: 1.5;
+	padding: 5em 6em 0 .55em;
+}
+.page-card > img,.page-card > p > img {
+	width: 50%;
+}
+.lantern .page-card img {
+	width: 42%;
+}
+.lantern .page-card {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	text-align: left;
+	line-height: 1em;
+	padding-top: 1.5em;
+	font-size: 1.2em;
+	text-indent: .3em;
+}
+.lantern > img {
+	width: 50%;
+	padding-top: 1.8em;
+	padding-left: .2em;
+}
+.lantern .page-card > p {
+	width: 100%;
+	height: 100%;
+	font-weight: normal;
+	padding-top: 1em;
+	font-size: .8em;
+}
+.bottom-button {
+	display: none;
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: .8rem;
+	margin: 0 auto;
+	width: 3.54666667rem;
+	height: .73333333rem/* 55px */ ;
+	background: url(../images/bottom-button.png) no-repeat center / contain;
+}
+.page-mask {
+	position: fixed;
+	top: 0;
+	right: 0;
+	left: 0;
+	bottom: 0;
+	margin: 0 auto;
+	text-align: center;
+	font-size: 150%;
+	opacity: 0;
+	background-color: #fff;
+	z-index: 99;
+}
+.page-mask > span {
+	position: absolute;
+	top: 42%;
+	left: 43%;
+	
+}
+.page-head, .page-tips {
+	position: fixed;
+	top: 0.5rem;
+	left: 0;
+	right: 0;
+	width: 5rem;
+	height: 1rem;
+	line-height: 1rem;
+	margin: 0 auto;
+	text-align: center;
+	color: #f8e4b4;
+}
+.page-head {
+	font-weight: bold;
+	font-size: 0.4rem;
+}
+
+/* 祝福语 */
+.page-blessing-warp {
+	padding: 0.2rem;
+	line-height: normal;
+	color: #fefbc8;
+}
+
+/* 头像 */
+.page-user-photos {
+	height: 30%;
+	text-align: center;
+}
+.page-user-photos img {
+	height: 100%;
+	border-radius: 50%;
+}
+
+/* 用户ID */
+.page-user-id {
+	position: relative;
+	width: 80%;
+	height: .66666667rem; /* 50px*/
+	line-height: 1.85;
+	margin: .26666667rem auto 0;
+	padding-left: .36rem;
+	border-top: .04rem solid #fefbc8;
+	border-bottom: .04rem solid #fefbc8;
+}
+.page-user-id:before, .page-user-id:after {
+	content: '';
+	position: absolute;
+	top: -.05333333rem;
+	height: .66666667rem;
+	width: .33333333rem/* 25px */ ;
+}
+.page-user-id:before {
+	left: -.08rem;
+	border-right: .10666667rem solid #fefbc8;
+	border-radius: 0 .66666667rem .66666667rem 0;
+}
+.page-user-id:after {
+	right: -.08rem;
+	border-left: .10666667rem solid #fefbc8;
+	border-radius: .66666667rem 0 0 .66666667rem;
+}
+.page-user-id .user-title, .page-user-id .user-id {
+	display: inline-block;
+	text-indent: 1em;
+}
+
+/* 祝福语 */
+.page-blessing-bd {
+	padding-top: .13333333rem;
+	line-height: 1.5;
+	text-align: center;
+}
+
+/* 提示 */
+.page-tips {
+	display: none;
+	top: 1rem;
+	color: #fff;
+	border: .01333333rem solid #cd361f;
+	background-color: hsla(12, 67%, 58%, 0.9);
+}
+.active {
+	display: block;
+}
+
+/* 动画 */
+
+/* 云 */
+.floatage-cloud {
+	-webkit-animation: floatage-cloud 3s linear infinite;
+	-moz-animation: floatage-cloud 3s linear infinite;
+	-o-animation: floatage-cloud 3s linear infinite;
+	animation: floatage-cloud 3s linear infinite;
+}
+
+/* 树 */
+.tree-up-donw {
+	-webkit-animation: tree-up-donw 3s linear infinite;
+	-moz-animation: tree-up-donw 3s linear infinite;
+	-o-animation: tree-up-donw 3s linear infinite;
+	animation: tree-up-donw 3s linear infinite;
+}
+
+/* 执行按钮 */
+.ext-but {
+	-webkit-animation: ext-but 3s linear infinite;
+	-moz-animation: ext-but 3s linear infinite;
+	-o-animation: ext-but 3s linear infinite;
+	animation: ext-but 3s linear infinite;
+}
+
+/* 执行 */
+
+/* 云 */
+@-webkit-keyframes floatage-cloud {
+	0 {
+		-webkit-transform: translateX(0);
+	}
+	25% {
+		-webkit-transform: translateX(.26666667rem);
+	}
+	50% {
+		-webkit-transform: translateX(0);
+	}
+	75% {
+		-webkit-transform: translateX(-.26666667rem);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+@-moz-keyframes floatage-cloud {
+	0 {
+		-moz-transform: translateX(0);
+	}
+	25% {
+		-moz-transform: translateX(.26666667rem);
+	}
+	50% {
+		-moz-transform: translateX(0);
+	}
+	75% {
+		-moz-transform: translateX(-.26666667rem);
+	}
+	100% {
+		-moz-transform: translateX(0);
+	}
+}
+@keyframes floatage-cloud {
+	25% {
+		transform: translateX(.26666667rem);
+	}
+	50% {
+		transform: translateX(0);
+	}
+	75% {
+		transform: translateX(-.26666667rem);
+	}
+	100% {
+		transform: translateX(0);
+	}
+}
+
+/* 树 */
+@-webkit-keyframes tree-up-donw {
+	0 {
+		-webkit-transform: translateY(0);
+	}
+	25% {
+		-webkit-transform: translateY(-.13333333rem);
+	}
+	50% {
+		-webkit-transform: translateY(0);
+	}
+	75% {
+		-webkit-transform: translateY(.13333333rem);
+	}
+	100% {
+		-webkit-transform: translateX(0);
+	}
+}
+@-moz-keyframes tree-up-donw {
+	0 {
+		-moz-transform: translateY(0);
+	}
+	25% {
+		-moz-transform: translateY(-.13333333rem);
+	}
+	50% {
+		-moz-transform: translateY(0);
+	}
+	75% {
+		-moz-transform: translateY(.13333333rem);
+	}
+	100% {
+		-moz-transform: translateX(0);
+	}
+}
+@keyframes tree-up-donw {
+	0 {
+		transform: translateY(0);
+	}
+	25% {
+		transform: translateY(-.13333333rem);
+	}
+	50% {
+		transform: translateY(0);
+	}
+	75% {
+		transform: translateY(.13333333rem);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+/* 执行按钮 */
+@-webkit-keyframes ext-but {
+	0 {
+		width: 6rem;
+		height: 6rem;
+	}
+	50% {
+		width: 5rem;
+		height: 5rem;
+	}
+	100% {
+		width: 6rem;
+		height: 6rem;
+	}
+}
+@-moz-keyframes ext-but {
+	0 {
+		width: 6rem;
+		height: 6rem;
+	}
+	50% {
+		width: 5rem;
+		height: 5rem;
+	}
+	100% {
+		width: 6rem;
+		height: 6rem;
+	}
+}
+@keyframes ext-but {
+	0 {
+		width: 3rem;
+		height: 3rem;
+	}
+	50% {
+		width: 2.7rem;
+		height: 2.7rem;
+	}
+	100% {
+		width: 3rem;
+		height: 3rem;
+	}
+}

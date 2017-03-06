@@ -43,11 +43,9 @@ a:active {
 .pull-right {
     float: right;
 }
-.container {
-    padding-right: 15px;
-    padding-left: 15px;
-    margin-right: auto;
-    margin-left: auto;
+.box {
+    padding-left: .2rem/* 15px */;
+    padding-right: .2rem/* 15px */;
 }
 .footer {
     height: 2rem/* 150px */;
