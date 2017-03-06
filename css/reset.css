@@ -1,0 +1,60 @@
+@charset "UTF-8";
+html {
+  font: 12px/1.5 Tahoma , '\5FAE\8F6F\96C5\9ED1',"Helvetica Neue", "Luxi Sans", "DejaVu Sans", "Hiragino Sans GB", STHeiti, "Microsoft YaHei" ,sans-serif;
+}
+html,body {
+    height: 100%;
+}
+body,h1,h2,h3,h4,h5,h6,p,ul,dl,dd {
+    margin: 0;
+}
+ul,ol {
+    padding: 0;
+}
+li {
+    list-style: none;
+}
+input,text,textarea {
+    outline: none;
+}
+img {
+    border: none 0;
+    vertical-align: top;
+}
+a {
+    text-decoration: none;
+    color: #000;
+}
+a:hover {
+    color: orangered;
+    text-decoration: none;
+}
+a:active {
+    color: #ccc;
+}
+*,:before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+.pull-left {
+    float: left;
+}
+.pull-right {
+    float: right;
+}
+.box {
+    padding-left: .2rem/* 15px */;
+    padding-right: .2rem/* 15px */;
+}
+.footer {
+    height: 2rem/* 150px */;
+    background-color: indianred;
+}
+.clearfix:before, .clearfix:after {
+    content: '';
+    display: table!important;
+}
+.clearfix::after {
+    clear: both;
+}
